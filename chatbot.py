@@ -10,11 +10,8 @@ USER_DB_FILE = "users.txt"
 CHAT_HISTORY_DIR = "chat_histories"
 
 api_key = os.getenv("HF_API_KEY")
+login(api_key)
 
-if api_key:
-    login(api_key)
-else:
-    print("API key is missing. Please set the environment variable.")
     
 # Function to load user credentials from a file
 def load_users():
