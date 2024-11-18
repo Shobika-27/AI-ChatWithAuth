@@ -3,11 +3,19 @@ import torch
 from transformers import pipeline
 import os
 import json
+from huggingface_hub import login
 
 # Initialize the user database file
 USER_DB_FILE = "users.txt"
 CHAT_HISTORY_DIR = "chat_histories"
 
+api_key = os.getenv("HF_API_KEY")
+
+if api_key:
+    login(api_key)
+else:
+    print("API key is missing. Please set the environment variable.")
+    
 # Function to load user credentials from a file
 def load_users():
     if not os.path.exists(USER_DB_FILE):
