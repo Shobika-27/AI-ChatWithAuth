@@ -31,7 +31,8 @@ pip install -r requirements.txt
 ![Signup Example](images/signup.png)
 
 ### 2. Login Screen
-![Login Example](images/login.png)
+![Login Example_1](images/login_success.png)
+![Login Example_2](images/login_invalid.png)
 
 ### 3. Chat Interface
 ![Chat Example_1](images/output1.png)
